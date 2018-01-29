@@ -1,0 +1,26 @@
+<h2>Signup Linkedin</h2>
+
+<form action="/signup" method="POST" id="form-container">
+  <label for="username">Username</label>
+  <input type="text" name="username" 
+    placeholder="Your username">
+  <label for="password">Password</label>
+  <input type="password" name="password" 
+    placeholder="Your password">
+  <br><br>
+  <label for="name">Name</label>
+  <input type="text" name="name" 
+    placeholder="Your name">
+    <label for="email">e-mail</label>
+  <input type="text" name="email" 
+    placeholder="Your email">
+    <br>
+    <% if ( typeof(error) != "undefined" ) { %>
+      <div class="alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+      <%}%>
+  <button>Create account</button>
+</form>
+<p class="account-message">
+  Already have an account? <a href="/login">Login</a>
